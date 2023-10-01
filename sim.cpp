@@ -20,26 +20,26 @@ enum OP_IDS
     //R-type opcodes...
     OP_ZERO = 0x0, // zero
     //I-type opcodes...
-    OP_ADDI = 0x8, // addi
-    OP_ADDIU = 0x9, // addiu
-    OP_ANDI = 0xc, // andi
-    OP_BEQ = 0x4, // beq
-    OP_BNE = , // bne
-    OP_LBU = , // lbu
-    OP_LHU = , // lhu
-    OP_LUI = , // lui
-    OP_LW = , // lw
-    OP_ORI = , // ori
-    OP_SLTI = , // slti
-    OP_SLTIU = , // sltiu
-    OP_SB = , // sb
-    OP_SH = , // sh
-    OP_SW = , // sw
-    OP_BLEZ = , // blez
-    OP_BGTZ = , // bgtz
+    OP_ADDI = 0x08, // addi
+    OP_ADDIU = 0x09, // addiu
+    OP_ANDI = 0x0c, // andi
+    OP_BEQ = 0x04, // beq
+    OP_BNE = 0x05 // bne
+    OP_LBU = 0x24 // lbu
+    OP_LHU = 0x25 // lhu
+    OP_LUI = 0x0f // lui
+    OP_LW = 0x23 // lw
+    OP_ORI = 0x0d // ori
+    OP_SLTI = 0x0a // slti
+    OP_SLTIU = 0x0b // sltiu
+    OP_SB = 0x28 // sb
+    OP_SH = 0x29 // sh
+    OP_SW = 0x2b // sw
+    OP_BLEZ = 0x06 // blez
+    OP_BGTZ = 0x07 // bgtz
     //J-type opcodes...
-    OP_J = , // j
-    OP_JAL =  // jal
+    OP_J = 0x02 // j
+    OP_JAL = 0x03 // jal
 };
 
 // TODO: fill in the missing hex values of FUNCT_IDs (function IDs)
@@ -48,15 +48,15 @@ enum FUNCT_IDS
     FUN_ADD = 0x20, // add
     FUN_ADDU = 0x21, // add unsigned (addu)
     FUN_AND = 0x24, // and
-    FUN_JR = , // jump register (jr)
-    FUN_NOR = , // nor
-    FUN_OR = , // or
-    FUN_SLT = , // set less than (slt)
-    FUN_SLTU = , // set less than unsigned (sltu)
-    FUN_SLL = , // shift left logical (sll)
-    FUN_SRL = , // shift right logical (srl)
-    FUN_SUB = , // substract (sub)
-    FUN_SUBU =  // substract unsigned (subu)
+    FUN_JR = 0x08 // jump register (jr)
+    FUN_NOR = 0x27 // nor
+    FUN_OR = 0x25 // or
+    FUN_SLT = 0x2a // set less than (slt)
+    FUN_SLTU = 0x2b // set less than unsigned (sltu)
+    FUN_SLL = 0x00 // shift left logical (sll)
+    FUN_SRL = 0x02 // shift right logical (srl)
+    FUN_SUB = 0x22 // substract (sub)
+    FUN_SUBU = 0x23 // substract unsigned (subu)
 };
 
 // extract specific bits [start, end] from a 32 bit instruction
